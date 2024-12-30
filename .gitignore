@@ -1,0 +1,16 @@
+# Node.js dependencies
+node_modules/
+
+# CDK output directory
+cdk.out/
+
+# TypeScript build artifacts
+*.js
+*.d.ts
+
+# Python dependencies
+lambda/*.pyc
+lambda/__pycache__/
+
+# Environment files
+.env
