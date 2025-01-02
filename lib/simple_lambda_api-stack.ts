@@ -27,7 +27,12 @@ export class SimpleLambdaApiStack extends Stack {
 			proxy: false,
 			deployOptions: {
 				stageName: 'prod'
-			}
+			},
+            defaultCorsPreflightOptions: {
+                allowOrigins: ['http://localhost:4200', 'https://kevimoy.org'],
+                allowMethods: ['GET', 'POST', 'PUT', 'DELETE'],
+                allowHeaders: ['Content-Type', 'Authorization'],
+            }
 		});
 
 		const objectsResource = api.root.addResource('objects');
